@@ -97,12 +97,16 @@ a {
 .info-group {
     display: flex;
     flex-direction: column;
-    gap: 35px;
-    border-radius: 25px;
-    height: 450px;
+    height: auto;
+    gap: 15px;
 }
 
 /*Form */
+.info-headline {
+    line-height: 15px;
+    /*diminue l'espace entre h1 et p*/
+}
+
 #search-bar-form {
     display: flex;
     flex-direction: row;
@@ -116,8 +120,8 @@ a {
     border-radius: 15px 0 0 15px;
     box-sizing: border-box;
     text-align: center;
-    font-size: x-large;
-    padding-top: 12px;
+    font-size: large;
+    padding-top: 16px;
     height: 49px;
     width: 50px;
 }
@@ -159,6 +163,11 @@ a {
     align-items: center;
 }
 
+.filter h2 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
 .filter-list {
     display: flex;
     flex-direction: row;
@@ -170,7 +179,7 @@ a {
     border-radius: 25px;
     background-color: white;
     border: var(--main-bg-color) 2px solid;
-    font-weight:700;
+    font-weight: 700;
     font-size: 17px;
     padding: 4px 19px;
     height: 50px;
@@ -180,12 +189,14 @@ a {
     background-color: var(--filter-bg-color);
 }
 
-.fa-info{
+.fa-info {
     border: 1px solid var(--main-bg-color);
-    border-radius: 50px;
-    margin: 5px;
-    height: 24px;
-    width: 24px;
+    font-size: small;
+    border-radius: 15px;
+    margin-right: 6px;
+    padding: 5px;
+    width: 15px;
+    height: 15px;
     text-align: center;
 }
 
