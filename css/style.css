@@ -60,6 +60,7 @@ a {
 }
 
 
+
 /****** Header ***********/
 .header {
     width: 100%;
@@ -81,7 +82,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: end;
-    /* colle les liens à la bordure*/
+    /* colle les liens à la bordure droite*/
     list-style-type: none;
     gap: 68px;
 }
@@ -101,13 +102,14 @@ a {
     gap: 15px;
 }
 
-/*Form */
 .info-headline {
     line-height: 15px;
     /*diminue l'espace entre h1 et p*/
 }
 
-#search-bar-form {
+/*Form */
+
+.search-bar>form {
     display: flex;
     flex-direction: row;
     height: 49px;
@@ -134,12 +136,6 @@ a {
     text-align: center;
 }
 
-#ville::placeholder {
-    color: black;
-    font-size: medium;
-    font-weight: bold;
-    text-align: center;
-}
 
 #search-button-desktop {
     background-color: #0065FC;
@@ -149,6 +145,7 @@ a {
     border-radius: 0 15px 15px 0;
     box-sizing: border-box;
     width: 132px;
+    cursor: pointer;
 }
 
 #search-button-mobile {
@@ -163,12 +160,18 @@ a {
     align-items: center;
 }
 
-.filter h2 {
+.group-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.filter>span {
     font-size: 18px;
     font-weight: 700;
 }
 
-.filter-list {
+.filter>ul {
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -183,6 +186,7 @@ a {
     font-size: 17px;
     padding: 4px 19px;
     height: 50px;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -271,6 +275,17 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    /****** Info group***********/
+    /*Filter*/
+    .filter {
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        margin-top: 20px;
+    }
+
+    /****** Hebergements And Populaires ***********/
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -307,25 +322,56 @@ a {
 @media (max-width: 767.98px) {
 
     /* ... */
+
+    /****** General ***********/
+    .main-container {
+        min-width: 320px;
+        padding: 0 20px;
+    }
+
+    /****** Header ***********/
     .header {
-        display: flex;
         flex-direction: column;
         height: 115px;
     }
 
     .logo-booki {
         margin: auto;
+        height: 19px;
+        padding: 0;
+    }
+
+    .nav {
+        width: 100%;
+        border-bottom: #DEEBFF 1px solid;
     }
 
     .nav-list {
-        justify-content: start;
-        gap: 68px;
+        justify-content:space-between;
+        text-align: justify;
+        margin: 10px 0;
+        padding: 0;
     }
 
     .nav-list a:hover {
         border-top: none;
+        padding-bottom: 10px;
         border-bottom: var(--main-color) solid 2px;
-        border-width: 100%;
+    }
+
+    /****** Info group***********/
+
+    .info-headline {
+        line-height: normal;
+    }
+
+    /*Form */
+    .search-bar>form {
+        justify-content: center;
+    }
+
+    #ville {
+        width: 90%;
     }
 
     #search-button-desktop {
@@ -336,11 +382,13 @@ a {
     #search-button-mobile {
         display: flex;
         visibility: visible;
+        cursor: pointer;
         background-color: var(--main-color);
         border: none;
         border-radius: 15px;
         height: 49px;
-        width: 49px;
+        min-width: 49px;
+        margin-left: -10px;
         box-shadow:
             0px 3.2px 5.3px rgba(0, 0, 0, 0.081),
             0px 10.7px 17.9px rgba(0, 0, 0, 0.119),
@@ -352,5 +400,21 @@ a {
         font-size: medium;
         padding-top: 15px;
         padding-left: 10px;
+    }   
+    
+    /*Filter*/
+    .group-btn{
+        justify-content: space-evenly;
+    }
+    .filter>ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+    .btn {
+        padding: 4px 19px;
+        width: 162.5px;
+        font-size: 14px;
     }
 }
