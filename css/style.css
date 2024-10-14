@@ -469,7 +469,6 @@ a {
 
     .nav {
         width: 100%;
-        border-bottom: #DEEBFF 1px solid;
     }
 
     .nav-list {
@@ -483,6 +482,7 @@ a {
         display: flex;
         justify-content: center;
         padding-bottom: 10px;
+        border-bottom: #DEEBFF 1px solid;
     }
 
     .nav-list li:hover {
