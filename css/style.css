@@ -86,6 +86,7 @@ a {
     /* colle les liens à la bordure droite*/
     list-style-type: none;
     gap: 68px;
+    padding: 0;
 }
 
 .nav-list a:hover {
@@ -99,7 +100,6 @@ a {
 .info-group {
     display: flex;
     flex-direction: column;
-    height: auto;
     gap: 15px;
 }
 
@@ -194,11 +194,16 @@ a {
     background-color: var(--filter-bg-color);
 }
 
+.info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
 .fa-info {
     border: 1px solid var(--main-bg-color);
     font-size: small;
     border-radius: 15px;
-    margin-right: 6px;
     padding: 5px;
     width: 15px;
     height: 15px;
@@ -446,12 +451,13 @@ a {
     /****** General ***********/
     .main-container {
         min-width: 320px;
-        padding: 0 20px;
+        padding: 0;
     }
 
     /****** Header ***********/
     .header {
         flex-direction: column;
+        align-items: end;
         height: 115px;
     }
 
@@ -467,22 +473,43 @@ a {
     }
 
     .nav-list {
-        justify-content: space-between;
-        text-align: justify;
-        margin: 10px 0;
-        padding: 0;
+        list-style-type: none;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .nav-list>li {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+
+    .nav-list li:hover {
+        border-bottom: var(--main-color) 1px solid;
+        color: var(--main-color);
+        cursor: pointer;
     }
 
     .nav-list a:hover {
+        color: none;
         border-top: none;
-        padding-bottom: 10px;
-        border-bottom: var(--main-color) solid 2px;
+        padding: 0;
+        /*annule la bordure au survol*/
     }
 
     /****** Info group***********/
+    .info-group {
+        padding: 0 20px;
+    }
 
     .info-headline {
         line-height: normal;
+    }
+
+    .info-headline>p {
+        margin-top: -10px;
+        /*remonte le p*/
     }
 
     /*Form */
@@ -523,8 +550,8 @@ a {
     }
 
     /*Filter*/
-    .group-btn {
-        justify-content: space-evenly;
+    .filter {
+        gap: 25px;
     }
 
     .filter>ul {
@@ -534,9 +561,31 @@ a {
         padding: 0;
     }
 
+    .group-btn {
+        justify-content: space-evenly;
+    }
+
     .btn {
         padding: 4px 19px;
         width: 162.5px;
         font-size: 14px;
+    }
+
+    .info {}
+
+    .fa-info {
+        border: 1px solid var(--main-bg-color);
+        font-size: small;
+        border-radius: 15px;
+        padding: 5px;
+        width: 15px;
+        height: 15px;
+        text-align: center;
+    }
+
+    /****** footer ***********/
+    .footer {
+        flex-direction: column;
+        gap: 15%;
     }
 }
