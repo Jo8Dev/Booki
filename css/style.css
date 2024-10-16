@@ -51,6 +51,10 @@ a {
     font-size: 16px;
 }
 
+.card-subtitle {
+    font-size: 14px;
+}
+
 .euro {
     font-weight: 700;
 }
@@ -103,6 +107,9 @@ a {
     gap: 15px;
 }
 
+.info-group h1 {
+    font-size: 22px;
+}
 .info-headline {
     line-height: 15px;
     /*diminue l'espace entre h1 et p*/
@@ -132,8 +139,8 @@ a {
 #ville {
     border: var(--main-bg-color) 1px solid;
     color: black;
-    font-size: medium;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -142,7 +149,7 @@ a {
     background-color: #0065FC;
     border: none;
     color: var(--main-bg-color);
-    font-size: larger;
+    font-size: 18px;
     border-radius: 0 15px 15px 0;
     box-sizing: border-box;
     width: 132px;
@@ -354,7 +361,10 @@ a {
     margin-top: 60px;
     padding: 0 20px 0 20px;
 }
-
+.footer span {
+    font-weight: 700;
+    font-size: 18px;
+}
 .footer ul {
     display: flex;
     flex-direction: column;
@@ -371,11 +381,11 @@ a {
 
     /****** General ***********/
     .card-title {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .card-subtitle {
-        font-size: 13px;
+        font-size: 14px;
     }
 
     /****** Info group***********/
@@ -390,7 +400,7 @@ a {
 
 
     .btn {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     /****** Hebergements And Populaires ***********/
@@ -422,10 +432,6 @@ a {
 
     .populaires-cards a {
         width: 30%;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
     }
 
     /****** Activités ***********/
@@ -559,13 +565,15 @@ a {
     }
 
     .group-btn {
-        justify-content: space-evenly;
-        gap: 0;
+        flex-direction: column;
+        align-items: center;
     }
 
     .group-btn>ul {
-        flex-direction: column;
-        gap: 10px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0.5%;
         margin: 0;
         padding: 0;
     }
