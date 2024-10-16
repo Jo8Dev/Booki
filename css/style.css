@@ -159,12 +159,22 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 20px;
 }
 
 .group-btn {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
+
+}
+
+.group-btn ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    gap: inherit;
 }
 
 .filter>span {
@@ -172,12 +182,6 @@ a {
     font-weight: 700;
 }
 
-.filter>ul {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    list-style: none;
-}
 
 .btn {
     border-radius: 25px;
@@ -381,6 +385,7 @@ a {
         flex-direction: column;
         align-items: normal;
         margin-top: 20px;
+        gap: 10px;
     }
 
 
@@ -491,7 +496,6 @@ a {
     }
 
     .nav-list a:hover {
-        color: none;
         border-top: none;
         padding: 0;
         /*annule la bordure au survol*/
@@ -550,18 +554,20 @@ a {
 
     /*Filter*/
     .filter {
-        gap: 25px;
-    }
-
-    .filter>ul {
-        flex-direction: column;
         gap: 10px;
-        margin: 0;
-        padding: 0;
+        flex-direction: column;
     }
 
     .group-btn {
         justify-content: space-evenly;
+        gap: 0;
+    }
+
+    .group-btn>ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
     }
 
     .btn {
@@ -624,7 +630,7 @@ a {
     }
 
     /****** Activités ***********/
-    
+
 
     .activites-cards {
         display: flex;
@@ -632,16 +638,15 @@ a {
         flex-flow: column nowrap;
         gap: 20px;
     }
+
     .activites-cards .card {
         height: 200px;
         width: 100%;
     }
+
     .activites-cards img {
-        width: 100%;
         height: 141px;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
-    } 
+    }
 
     /****** footer ***********/
     .footer {
