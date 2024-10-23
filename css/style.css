@@ -364,6 +364,10 @@ a {
     margin-top: 60px;
     padding: 0 20px 0 20px;
 }
+
+.footer div {
+    margin-top: 20px;
+}
 .footer span {
     font-weight: 700;
     font-size: 18px;
