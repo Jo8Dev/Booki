@@ -189,6 +189,9 @@ a {
     font-weight: 700;
 }
 
+.btn i {
+    margin-right: 6px;
+}
 
 .btn {
     border-radius: 25px;
