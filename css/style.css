@@ -504,7 +504,7 @@ a {
     .nav-list a:hover {
         border-top: none;
         padding: 0;
-        /*annule la bordure au survol*/
+        /*annule la bordure TOP au survol*/
     }
 
     /****** Info group***********/
