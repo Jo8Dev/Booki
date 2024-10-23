@@ -190,8 +190,7 @@ a {
 }
 
 .btn i {
-    margin-right: 6
-    px;
+    margin-right: 6px;
 }
 
 .btn {
@@ -486,7 +485,6 @@ a {
     }
 
     .nav-list {
-        list-style-type: none;
         gap: 0;
         margin-bottom: 0;
     }
