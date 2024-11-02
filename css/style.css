@@ -96,7 +96,7 @@ a {
 .nav-list a:hover {
     color: var(--main-color);
     border-top: var(--main-color) solid 2px;
-    padding-top: 14px;
+    padding-top: 14.5px;
     /*pousse la bordure vers le top*/
 }
 
