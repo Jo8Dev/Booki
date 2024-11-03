@@ -247,10 +247,10 @@ a {
 }
 
 .hebergements-cards {
-    display: grid; 
+    display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    grid-gap:20px;
+    grid-gap: 20px;
     box-sizing: border-box;
 
 }
@@ -267,13 +267,14 @@ a {
 }
 
 .hebergements-cards .card-title {
-    line-height: 13px;
-    margin-top: 7px;
+    line-height: 15px;
+    margin-top: 6px;
 }
+
 .hebergements-cards .card-content {
-    line-height: 8px;
-    text-overflow:clip;
+    line-height: 7px;
     padding-left: 15px;
+    box-sizing: border-box;
 }
 
 .hebergements>a {
@@ -344,8 +345,8 @@ a {
 }
 
 .activites-cards .card {
-    height: 439px;
     padding: 0;
+    min-height: 439px;
 }
 
 .activites-cards img {
@@ -445,7 +446,7 @@ a {
 
     /****** Activités ***********/
     .activites-cards .card {
-        height: 270px;
+        min-height: 270px;
     }
 
     .activites-cards img {
@@ -455,6 +456,7 @@ a {
         border-top-right-radius: 20px;
     }
 
+    
     /****** footer ***********/
     .footer {
         gap: 15%;
