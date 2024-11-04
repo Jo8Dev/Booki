@@ -110,6 +110,7 @@ a {
 .info-group h1 {
     font-size: 22px;
 }
+
 .info-headline {
     line-height: 15px;
     /*diminue l'espace entre h1 et p*/
@@ -246,17 +247,16 @@ a {
 }
 
 .hebergements-cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 20px;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    box-sizing: border-box;
 
 }
 
 .hebergements-cards .card {
     height: 207px;
-    width: 250px;
 }
 
 .hebergements-cards img {
@@ -266,9 +266,15 @@ a {
     border-top-right-radius: 20px;
 }
 
+.hebergements-cards .card-title {
+    line-height: 15px;
+    margin-top: 6px;
+}
+
 .hebergements-cards .card-content {
-    line-height: 8px;
-    padding-left: 15px;
+    line-height: 7px;
+    padding-left: 12px;
+    box-sizing: border-box;
 }
 
 .hebergements>a {
@@ -332,16 +338,15 @@ a {
 }
 
 .activites-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    row-gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
 }
 
 .activites-cards .card {
-    height: 439px;
-    width: 297px;
     padding: 0;
+    min-height: 439px;
 }
 
 .activites-cards img {
@@ -372,6 +377,7 @@ a {
     font-weight: 700;
     font-size: 18px;
 }
+
 .footer ul {
     display: flex;
     flex-direction: column;
@@ -421,10 +427,6 @@ a {
         width: 100%;
     }
 
-    .hebergements-cards .card {
-        width: 268px;
-    }
-
     /*Populaires*/
     .populaires {
         width: 100%;
@@ -443,8 +445,7 @@ a {
 
     /****** Activités ***********/
     .activites-cards .card {
-        height: 270px;
-        width: 193px;
+        min-height: 270px;
     }
 
     .activites-cards img {
@@ -454,6 +455,7 @@ a {
         border-top-right-radius: 20px;
     }
 
+    
     /****** footer ***********/
     .footer {
         gap: 15%;
@@ -631,6 +633,7 @@ a {
 
     .hebergements-cards {
         width: 100%;
+        display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
     }
@@ -654,7 +657,7 @@ a {
     }
 
     .activites-cards .card {
-        height: 200px;
+        min-height: 200px;
         width: 100%;
     }
 
