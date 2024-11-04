@@ -251,12 +251,13 @@ a {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
-    box-sizing: border-box;
-
 }
 
 .hebergements-cards .card {
-    height: 207px;
+    min-height: 197px;
+    height: 96%;
+    /*pour que les cards gardent la meme 
+    taille sur les résolutions intermediaire */
 }
 
 .hebergements-cards img {
@@ -267,14 +268,19 @@ a {
 }
 
 .hebergements-cards .card-title {
-    line-height: 15px;
+    line-height: 18px;
     margin-top: 6px;
+    margin-bottom: 0;
 }
 
 .hebergements-cards .card-content {
     line-height: 7px;
     padding-left: 12px;
     box-sizing: border-box;
+}
+
+.hebergements-cards .card-rating {
+    margin-bottom: 4px;
 }
 
 .hebergements>a {
